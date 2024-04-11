@@ -1,0 +1,15 @@
+.comment-tree {
+  content: "___";
+  position: absolute;
+  left: -10px; /* 调整线的位置 */
+  top: 0;
+  bottom: 0;
+  width: 2px; /* 调整线的宽度 */
+  background-color: green; /* 调整线的颜色 */
+  z-index: -1; /* 将线放在内容之后 */
+}
+
+.input-right-image {
+  min-height: 30px;
+  min-width: 40px;
+}

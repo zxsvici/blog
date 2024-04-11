@@ -1,0 +1,8 @@
+.link {
+  color: white;
+  transition: color 0.3s ease; /* 添加过渡效果，使颜色变化更平滑 */
+}
+
+.link:hover {
+  color: deepskyblue; /* 将 "your-desired-hover-color" 替换为您希望的悬停颜色值 */
+}

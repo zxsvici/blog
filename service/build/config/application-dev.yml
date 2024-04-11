@@ -1,0 +1,47 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: blog
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  mvc:
+    static-path-pattern: ${blog.static-prefix}**
+  resources:
+    static-locations: file:${blog.static-dir}
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/my_blog?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  redis:
+    host: 192.168.170.103
+    port: 6379
+    password: vici6379
+    database: 1
+    lettuce:
+      pool:
+        max-wait: 3000ms
+        max-idle: 8
+        max-active: 8
+        min-idle: 0
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+blog:
+  is-dev: true
+  static-dir: F:/cj/project/vici-blog-service/vici-blog-service/build/static
+  dev-server-url: http://127.0.0.1:8001
+  static-prefix: /static/
+  admin: admin
+  password: admin111
+
+logging:
+  file:
+    name: ./log

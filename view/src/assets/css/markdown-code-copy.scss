@@ -1,0 +1,40 @@
+/* 自定义按钮样式 */
+.markdown-it-code-copy {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 按钮悬停时的样式 */
+.markdown-it-code-copy:hover {
+  background-color: #2980b9;
+}
+
+/* 按钮点击时的样式 */
+.markdown-it-code-copy:active {
+  background-color: #1f618d;
+}
+
+/* 图标样式 */
+.markdown-it-code-copy .mdi {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* 隐藏原始文本选中效果 */
+.markdown-it-code-copy::selection {
+  background-color: transparent;
+}
+
+.markdown-it-code-copy-button {
+  font-size: 12px;
+}
+
+.markdown-it-code-copy-button::before {
+  content: 'COPY';
+}
